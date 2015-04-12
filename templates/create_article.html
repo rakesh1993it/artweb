@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{% load staticfiles %}
+<h3> Add Article</h3>
+<form action="/artimages/create/" method="post" enctype="multipart/form-data">{% csrf_token %}
+<ul>
+{{form.as_p}}
+</ul>
+
+<input type="submit" name="submit" value="Create Article">
+</form>
+
+
+{% endblock %}
